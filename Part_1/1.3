@@ -1,0 +1,10 @@
+docker run -d -it --name 1.3_exercise devopsdockeruh/simple-web-service:ubuntu
+
+C:\Users\Alex>docker container ls
+CONTAINER ID   IMAGE                                      COMMAND                 CREATED              STATUS              PORTS     NAMES
+76d31455d360   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"   About a minute ago   Up About a minute             1.3_exercise
+
+C:\Users\Alex>docker exec -it 1.3_exercise bash
+root@76d31455d360:/usr/src/app#
+root@76d31455d360:/usr/src/app# tail -f ./text.log
+'You can find the source code here: https://github.com/docker-hy'
