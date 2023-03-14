@@ -1,0 +1,16 @@
+docker pull devopsdockeruh/simple-web-service:ubuntu
+docker pull devopsdockeruh/simple-web-service:alpine
+
+
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   24 months ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   24 months ago   15.7MB
+
+docker run -d -it --name myAlpine fd312
+
+C:\Users\Alex>docker container ls
+CONTAINER ID   IMAGE     COMMAND                 CREATED         STATUS         PORTS     NAMES
+73034ab207f4   fd312     "/usr/src/app/server"   2 minutes ago   Up 2 minutes             myAlpine
+
+docker exec -it myAlpine sh
+/usr/src/app # tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
